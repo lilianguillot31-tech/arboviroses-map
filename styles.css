@@ -1,0 +1,19 @@
+:root {
+  --level-0: #f4f6f8;
+  --level-1: #ffe08a;
+  --level-2: #ff9f43;
+  --level-3: #e63946;
+}
+body { margin:0; font-family: Inter, system-ui, sans-serif; background:#f8fafc; color:#1f2937; }
+.topbar { padding: 1rem 1.25rem; background:#0f172a; color:white; position:sticky; top:0; z-index:1000; }
+.topbar h1{margin:.2rem 0; font-size:1.2rem;} .topbar p{margin:0 0 .75rem 0; opacity:.9}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem}
+.filters button{border:1px solid #334155;background:#1e293b;color:#e2e8f0;padding:.4rem .7rem;border-radius:999px;cursor:pointer}
+.filters button.active{background:#2563eb;border-color:#60a5fa;color:#fff}
+main{display:grid;grid-template-columns:minmax(0,1fr) 300px; gap:1rem; padding:1rem}
+#map{height:calc(100vh - 170px); border-radius:12px; overflow:hidden; box-shadow:0 4px 12px #0001;}
+.legend-panel{background:white;border-radius:12px;padding:1rem;box-shadow:0 4px 12px #0001;height:fit-content}
+.legend-panel ul{list-style:none;padding:0} .legend-panel li{display:flex;align-items:center;gap:.5rem;margin:.45rem 0}
+.swatch{width:18px;height:18px;border-radius:4px;display:inline-block;border:1px solid #cbd5e1}
+.level-0{background:var(--level-0)} .level-1{background:var(--level-1)} .level-2{background:var(--level-2)} .level-3{background:var(--level-3)}
+@media (max-width: 980px){main{grid-template-columns:1fr}#map{height:70vh}}

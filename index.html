@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carte santé voyageurs (France)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Carte mondiale des pathologies du voyageur</h1>
+      <p>Référence France · recommandations HCSP 2025 + signaux épidémiologiques CDC/ECDC</p>
+      <div id="disease-filters" class="filters"></div>
+    </header>
+
+    <main>
+      <section id="map" aria-label="Carte du monde des risques voyageurs"></section>
+      <aside class="legend-panel">
+        <h2>Légende</h2>
+        <ul>
+          <li><span class="swatch level-0"></span>Pas de recommandation spécifique</li>
+          <li><span class="swatch level-1"></span>À discuter selon exposition</li>
+          <li><span class="swatch level-2"></span>Recommandé pour voyageurs à risque</li>
+          <li><span class="swatch level-3"></span>Fortement recommandé / zone active</li>
+        </ul>
+        <p id="meta"></p>
+      </aside>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
